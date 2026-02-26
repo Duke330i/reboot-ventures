@@ -1,0 +1,44 @@
+---
+const team = [
+  { name: "Vib Prasad", initials: "VP", photo: "/images/team/Vib_Prasad.png", title: "Managing Partner, AI Strategy & CEO Practice", bio: "Vib brings 25+ years of experience as a CEO and technology executive. He founded CourtLink, a legal research platform acquired by LexisNexis, and has since led AI strategy and digital transformation initiatives. A certified AI specialist and Wharton MBA, Vib works directly with C-suite leaders to cut through the hype, define what's actually achievable, and build the internal capacity to deliver.", expertise: ["AI Strategy", "CEO Advisory", "Digital Transformation"], color: "#0F2044" },
+  { name: "Jason Wrubel", initials: "JW", photo: "/images/team/Jason_Wrubel.jpg", title: "Managing Partner, Operations & Change Management", bio: "Jason has spent 25+ years advising more than 130 C-level executives on operational transformation, change management, and the human side of technology adoption. His background spans Fortune 100 companies and high-growth startups, with deep expertise in building cross-functional execution frameworks.", expertise: ["Change Management", "COO Advisory", "Operations"], color: "#059669" },
+  { name: "Jason Bennett", initials: "JB", photo: "/images/team/Jason_Bennett.jpg", title: "Managing Partner, Technology & Engineering", bio: "Jason brings 20+ years of experience scaling engineering organizations and modernizing enterprise technology. A former Google executive, he has led engineering transformations at companies ranging from high-growth startups to global enterprises.", expertise: ["Engineering Leadership", "Cloud Architecture", "AI Readiness"], color: "#0F2044" },
+  { name: "Michael Weinberg", initials: "MW", photo: "/images/team/Michael_Weinberg.jpg", title: "Expert, AI-Native Data Architecture", bio: "Michael pioneers AI-native data architecture, transforming complex, fragmented data into actionable intelligence. He helps organizations move from raw data to strategic insight by designing the infrastructure that makes AI actually work at scale.", expertise: ["Data Architecture", "AI Infrastructure", "Data Governance"], color: "#1a3060" },
+  { name: "Norm Metcalfe", initials: "NM", photo: "/images/team/Norman_Metcalfe.jpeg", title: "Expert, AI Infrastructure Engineering", bio: "Norm is an engineering leader with 15+ years of experience building and scaling technology organizations. His current focus is the infrastructure layer that makes AI work in production: LLM integration, vector database management, RAG systems, and model deployment.", expertise: ["AI Infrastructure", "LLM Integration", "AWS"], color: "#047857" },
+  { name: "Matt Powers", initials: "MP", photo: "/images/team/Matt_Powers.jpeg", title: "Expert, AI & Product Engineering", bio: "Matt is a 20+ year technology leader with ML and AI patents to his name. He has built extensible, production-grade AI infrastructure across four distinct growth phases: AI transformation, hyper-scaling, venture growth, and PE acquisition.", expertise: ["AI Engineering", "ML Systems", "AI Automation"], color: "#059669" },
+  { name: "Marina Vytovtova", initials: "MV", photo: "/images/team/Marina_Vytovtova.jpg", title: "Expert, Product Strategy & Discovery", bio: "Marina is a fractional product leader with 15+ years of experience helping organizations de-risk and accelerate development by validating ideas before building them. She specializes in product discovery — understanding what customers actually need.", expertise: ["Product Discovery", "Fractional PM", "AI Product Strategy"], color: "#1a3060" },
+  { name: "Shukti Ghosh", initials: "SG", photo: "/images/team/Shukti_Ghosh.jpg", title: "Expert, Strategic Finance", bio: "Shukti is a fractional CFO with 20 years of experience in strategic finance across startups to Fortune 50 companies. A Columbia MBA, she specializes in translating AI investments into financial models that boards and investors understand.", expertise: ["Fractional CFO", "Strategic Finance", "AI ROI Analysis"], color: "#047857" },
+  { name: "Scott King", initials: "SK", photo: "/images/team/Scott_King.jpeg", title: "Expert, GTM Strategy", bio: "Scott is a sales leader with 25+ years of experience across sales enablement, sales structure design, and client experience. He is the architect of Reboot's go-to-market approach and the principal behind the firm's 'purpose-built' positioning framework.", expertise: ["Sales Enablement", "GTM Strategy", "Revenue Leadership"], color: "#0F2044" },
+  { name: "Stuart Kerr", initials: "STK", photo: "/images/team/Stuart_Kerr.png", title: "Expert, AI Strategy & Revenue Growth", bio: "Stuart brings 30 years of experience guiding companies through transformative growth. He has led eight firms through major strategic inflection points — two of which achieved IPOs with valuations exceeding $2 billion.", expertise: ["AI Strategy", "Revenue Growth", "IPO Preparation"], color: "#059669" },
+  { name: "Marco Greenberg", initials: "MG", photo: "/images/team/Marco_Greenberg.png", title: "Expert, Strategic Communications & Market Positioning", bio: "Marco is a startup communications strategist with 30+ years of experience turning complex ideas into compelling narratives. An early team member at Akamai during its IPO, he has guided multiple startups through successful acquisitions.", expertise: ["Strategic Communications", "Market Positioning", "Executive Messaging"], color: "#1a3060" }
+];
+---
+<section id="our-team" class="py-20 lg:py-28" style="background:#F8FAFC">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mb-16">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-5" style="color:#0F2044">Senior Practitioners. Not Theorists.</h2>
+      <p class="text-lg text-slate-600 leading-relaxed">Every Reboot engagement is led by a principal with decades of real operating experience. We've built companies, run P&Ls, led enterprise transformations, and guided CEOs through the hardest calls they've ever made.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {team.map((member) => (
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex gap-5">
+          {member.photo ? (
+            <img src={member.photo} alt={member.name} class="flex-shrink-0 w-16 h-16 rounded-full object-cover" />
+          ) : (
+            <div class="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg" style={`background:${member.color}`}>{member.initials}</div>
+          )}
+          <div class="flex-1 min-w-0">
+            <h3 class="text-base font-bold mb-0.5" style="color:#0F2044">{member.name}</h3>
+            <p class="text-xs font-semibold mb-3" style="color:#059669">{member.title}</p>
+            <p class="text-sm text-slate-600 leading-relaxed mb-3">{member.bio}</p>
+            <div class="flex flex-wrap gap-1.5">
+              {member.expertise.map((skill) => (
+                <span class="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 font-medium">{skill}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

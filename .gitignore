@@ -1,0 +1,12 @@
+dist/
+node_modules/
+npm-debug.log*
+.env
+.env.local
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
