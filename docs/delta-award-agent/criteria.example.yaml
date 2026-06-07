@@ -1,0 +1,68 @@
+# Delta award search — criteria spec (example)
+# Edit this file to change the search without touching code.
+
+origin: CMH
+
+# Candidate Asia destinations. Trim/extend as desired.
+# `priority` and `notes` come from the brief; they affect ranking, not filtering.
+destinations:
+  - code: ICN   # Seoul — many onward connections, but tight on 3 days
+    priority: high
+    notes: "Great connection hub; verify ground time holds with onward legs."
+  - code: HND   # Tokyo Haneda
+    priority: medium
+    notes: "High demand — award space scarce; watch cpp."
+  - code: NRT   # Tokyo Narita
+    priority: medium
+    notes: "High demand."
+  - code: PVG   # Shanghai
+    priority: medium
+    notes: "Low demand, few flights, high cash yield -> award cpp can be excellent."
+  - code: PEK   # Beijing
+    priority: medium
+    notes: "Few flights; high yield."
+  - code: HKG   # Hong Kong
+    priority: medium
+    notes: ""
+  - code: SIN   # Singapore
+    priority: low
+    notes: "Long; ground-time rule is hard to satisfy on a weekend."
+  - code: TPE   # Taipei
+    priority: low
+    notes: "Wanted, but schedule rarely fits a 3-day weekend."
+  # Oceania intentionally excluded by default: southern-winter, suspended/reduced service.
+  # - code: SYD
+  # - code: AKL
+
+# Hard schedule constraints
+schedule:
+  outbound_day: Friday
+  outbound_depart_after: "12:00"   # afternoon/evening, local at origin
+  outbound_depart_before: "23:59"
+  return_day: Monday
+  return_arrive_by: "23:00"        # local at origin (CMH)
+  min_ground_hours: 20             # destination arrival -> destination departure
+
+# Cabins to price
+cabins:
+  - main
+  - premium_select   # PS
+  - delta_one        # D1
+
+# Valuation / ranking
+valuation:
+  # cents per mile = (cash_fare - award_taxes_fees) / miles * 100
+  flag_cpp_at_or_above: 1.5
+ranking:
+  prefer_d1_saver_award: true      # D1 with open award seats
+  prefer_guc_space: true           # Z fare class available (GUC clears into Z)
+  # weighting: D1/GUC availability first, then cpp, then destination priority
+
+# How far out to search (filled per run)
+search_window:
+  weekends: []                     # e.g. ["2026-09-18", "2026-10-16"] (the Friday)
+  weeks_ahead: 12                  # or auto-generate Fridays this many weeks out
+
+# Data provider — decided later. One of: manual | seats_aero | expertflyer | amadeus
+provider:
+  type: manual
