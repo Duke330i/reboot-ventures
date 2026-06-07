@@ -1,0 +1,53 @@
+[
+  {
+    "id": "DL-ICN-0918",
+    "destination": "ICN",
+    "outbound": { "depart": "2026-09-18T17:25", "arrive": "2026-09-19T21:40" },
+    "return":   { "depart": "2026-09-21T13:10", "arrive": "2026-09-21T16:55" },
+    "cabins": {
+      "main":           { "miles": 95000,  "taxes_fees": 92, "cash": 1380 },
+      "premium_select": { "miles": 165000, "taxes_fees": 92, "cash": 2750 },
+      "delta_one":      { "miles": 295000, "taxes_fees": 92, "cash": 7100, "saver_award": true, "z_available": true }
+    }
+  },
+  {
+    "id": "DL-PVG-0918",
+    "destination": "PVG",
+    "outbound": { "depart": "2026-09-18T18:40", "arrive": "2026-09-19T23:05" },
+    "return":   { "depart": "2026-09-21T09:30", "arrive": "2026-09-21T19:20" },
+    "cabins": {
+      "main":           { "miles": 110000, "taxes_fees": 78, "cash": 1990 },
+      "premium_select": { "miles": 190000, "taxes_fees": 78, "cash": 3650 },
+      "delta_one":      { "miles": 340000, "taxes_fees": 78, "cash": 9400, "saver_award": false, "z_available": true }
+    }
+  },
+  {
+    "id": "DL-HND-0918",
+    "destination": "HND",
+    "outbound": { "depart": "2026-09-18T16:10", "arrive": "2026-09-19T19:55" },
+    "return":   { "depart": "2026-09-21T15:45", "arrive": "2026-09-21T20:30" },
+    "cabins": {
+      "main":           { "miles": 120000, "taxes_fees": 88, "cash": 1620 },
+      "premium_select": { "miles": 210000, "taxes_fees": 88, "cash": 3100 },
+      "delta_one":      { "miles": 425000, "taxes_fees": 88, "cash": 6900, "saver_award": false, "z_available": false }
+    }
+  },
+  {
+    "id": "DL-TPE-0918-tooShort",
+    "destination": "TPE",
+    "outbound": { "depart": "2026-09-18T19:00", "arrive": "2026-09-20T05:30" },
+    "return":   { "depart": "2026-09-20T22:15", "arrive": "2026-09-21T18:40" },
+    "cabins": {
+      "delta_one": { "miles": 360000, "taxes_fees": 95, "cash": 8200, "saver_award": true, "z_available": true }
+    }
+  },
+  {
+    "id": "DL-NRT-0911-wrongReturnDay",
+    "destination": "NRT",
+    "outbound": { "depart": "2026-09-11T17:00", "arrive": "2026-09-12T20:10" },
+    "return":   { "depart": "2026-09-13T17:00", "arrive": "2026-09-13T21:30" },
+    "cabins": {
+      "delta_one": { "miles": 300000, "taxes_fees": 88, "cash": 7000, "saver_award": true, "z_available": false }
+    }
+  }
+]

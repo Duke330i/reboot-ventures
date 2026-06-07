@@ -1,0 +1,25 @@
+{
+  "origin": "CMH",
+  "destinations": [
+    { "code": "ICN", "priority": "high",   "notes": "Great connection hub; verify ground time holds with onward legs." },
+    { "code": "HND", "priority": "medium", "notes": "High demand - award space scarce; watch cpp." },
+    { "code": "NRT", "priority": "medium", "notes": "High demand." },
+    { "code": "PVG", "priority": "medium", "notes": "Low demand, few flights, high cash yield -> award cpp can be excellent." },
+    { "code": "PEK", "priority": "medium", "notes": "Few flights; high yield." },
+    { "code": "HKG", "priority": "medium", "notes": "" },
+    { "code": "SIN", "priority": "low",    "notes": "Long; ground-time rule is hard to satisfy on a weekend." },
+    { "code": "TPE", "priority": "low",    "notes": "Wanted, but schedule rarely fits a 3-day weekend." }
+  ],
+  "schedule": {
+    "outbound_day": "Friday",
+    "outbound_depart_after": "12:00",
+    "outbound_depart_before": "23:59",
+    "return_day": "Monday",
+    "return_arrive_by": "23:00",
+    "min_ground_hours": 20
+  },
+  "cabins": ["main", "premium_select", "delta_one"],
+  "valuation": { "flag_cpp_at_or_above": 1.5 },
+  "ranking": { "prefer_d1_saver_award": true, "prefer_guc_space": true },
+  "provider": { "type": "manual" }
+}
