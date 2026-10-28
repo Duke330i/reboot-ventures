@@ -1,0 +1,44 @@
+---
+const situations = [
+  {
+    title: 'The business is entering a new phase',
+    body: 'Growth or change is creating new complexity. You need a clearer strategy, priorities, or leadership structure for what comes next.',
+  },
+  {
+    title: "Execution isn't matching ambition",
+    body: 'Plans keep stalling between teams. Priorities, ownership, and decisions need to translate into action and follow-through.',
+  },
+  {
+    title: 'Leadership is stretched or changing',
+    body: 'Key roles are shifting, or your team needs experienced judgment and additional capacity through an important transition.',
+  },
+  {
+    title: 'AI is creating opportunity and uncertainty',
+    body: "You need practical answers about where to invest, what's ready, what needs fixing, and what to do first.",
+  },
+  {
+    title: "A big decision needs expertise you don't have",
+    body: 'You need an independent perspective, relevant specialists, and a recommendation your leadership team can act on.',
+  },
+  {
+    title: 'You want a trusted outside thought partner',
+    body: 'You or another senior executive need candid coaching and advice through difficult decisions, new responsibilities, or leadership challenges.',
+  },
+];
+---
+<section id="situations" class="bg-slate-50 scroll-mt-16">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-20 lg:py-[88px] flex flex-col gap-10">
+    <div class="flex flex-col gap-3 max-w-[760px]">
+      <span class="text-[13px] font-bold tracking-[1.5px] uppercase text-emerald-700">When to bring Reboot in</span>
+      <h2 class="m-0 text-3xl lg:text-[42px] leading-tight font-extrabold">These are the kinds of challenges we help leaders work through.</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {situations.map((s) => (
+        <div class="bg-white border border-slate-200 rounded-[10px] p-7 flex flex-col gap-2.5">
+          <h3 class="m-0 text-[19px] font-bold">{s.title}</h3>
+          <p class="m-0 text-base leading-relaxed text-slate-600">{s.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

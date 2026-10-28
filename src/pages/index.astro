@@ -2,28 +2,25 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
-import Problem from '../components/Problem.astro';
-import WhatWeDo from '../components/WhatWeDo.astro';
-import Team from '../components/Team.astro';
+import Situations from '../components/Situations.astro';
+import HowWeHelp from '../components/HowWeHelp.astro';
+import OurWork from '../components/OurWork.astro';
 import WhyReboot from '../components/WhyReboot.astro';
-import SocialProof from '../components/SocialProof.astro';
-import WhoWeWorkWith from '../components/WhoWeWorkWith.astro';
-import Insights from '../components/Insights.astro';
+import Team from '../components/Team.astro';
 import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
 ---
-<Layout title="Reboot Ventures | AI Transformation Consulting" description="Reboot Ventures builds purpose-built AI consulting teams for enterprise leaders. Senior practitioners, proven model, real results.">
+<Layout
+  title="Reboot Ventures | Operator-Led Strategy & Execution Advisory"
+  description="Reboot Ventures helps CEOs and leadership teams solve the problems holding their business back: strategy, scaling, organizational effectiveness, AI and executive coaching, led by partners who have run businesses."
+>
   <Nav />
   <main>
     <Hero />
-    <Problem />
-    <WhatWeDo />
-    <Team />
+    <Situations />
+    <HowWeHelp />
+    <OurWork />
     <WhyReboot />
-    <SocialProof />
-    <WhoWeWorkWith />
-    <Insights />
+    <Team />
     <Contact />
   </main>
-  <Footer />
 </Layout>

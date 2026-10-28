@@ -4,16 +4,30 @@ interface Props {
   description: string;
 }
 const { title, description } = Astro.props;
+const siteUrl = 'https://www.rebootventures.co';
+const canonical = new URL(Astro.url.pathname, siteUrl).href;
+const ogImage = new URL('/logo.png', siteUrl).href;
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Reboot Ventures" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
   </head>
-  <body>
+  <body class="antialiased text-[#0F2044] bg-white">
     <slot />
   </body>
 </html>

@@ -1,0 +1,41 @@
+---
+const capabilities = [
+  {
+    title: 'Business Strategy & Scaling',
+    body: 'Strategic planning, business priorities, growth and business-model decisions, and building the organization needed for the next phase.',
+  },
+  {
+    title: 'Organizational Effectiveness & Leadership',
+    body: 'Organizational design, decision rights, operating rhythm, accountability, communication, and executive team effectiveness.',
+  },
+  {
+    title: 'AI & Technology Strategy',
+    body: 'AI opportunity assessments, technology roadmaps, data readiness, governance, and build/buy/partner decisions. We connect technology choices to business priorities and operating realities.',
+  },
+  {
+    title: 'Execution & Transformation Support',
+    body: 'Fractional operating and program leadership, implementation oversight, and cross-functional coordination. We help internal teams and vendors turn priorities into progress.',
+  },
+  {
+    title: 'Executive Coaching & Strategic Advisory',
+    body: 'One-on-one coaching and candid advice for CEOs and senior executives navigating difficult decisions, changing responsibilities, and leadership challenges.',
+  },
+];
+---
+<section id="help" class="bg-white scroll-mt-16">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-20 lg:py-[88px] flex flex-col gap-10">
+    <div class="flex flex-col gap-3 max-w-[760px]">
+      <span class="text-[13px] font-bold tracking-[1.5px] uppercase text-emerald-700">How we help</span>
+      <h2 class="m-0 text-3xl lg:text-[42px] leading-tight font-extrabold">Five ways we work with clients.</h2>
+      <p class="m-0 text-[17px] leading-relaxed text-slate-600">Engage us for one focused challenge or combine capabilities as the work requires.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-6">
+      {capabilities.map((c) => (
+        <div class="border-t-[3px] border-[#0F2044] pt-6 pb-2 px-1 flex flex-col gap-2.5">
+          <h3 class="m-0 text-xl font-bold">{c.title}</h3>
+          <p class="m-0 text-base leading-relaxed text-slate-600">{c.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
