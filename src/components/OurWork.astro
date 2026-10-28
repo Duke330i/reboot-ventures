@@ -1,0 +1,35 @@
+---
+const cases = [
+  {
+    sector: 'Streaming media company',
+    title: 'Helping leadership make decisions and run the business with greater clarity',
+    situation: 'Strategic uncertainty and leadership changes exposed unclear responsibilities, overlapping meetings, and inconsistent decision-making and accountability.',
+    work: 'We helped leadership strengthen strategic planning, assessed the operating model, developed role and decision-rights frameworks, designed a clearer management cadence, and provided executive coaching.',
+  },
+  {
+    sector: 'Specialized financial technology firm',
+    title: 'Building the leadership and operating foundations to scale',
+    situation: 'Growth was increasing pressure on engineering leadership, product processes, and a small number of people holding critical institutional knowledge.',
+    work: 'We provided ongoing executive advisory and engineering leadership hiring support, and developed a sequenced AI and operating roadmap prioritizing product processes, QA, knowledge management, and organizational ownership.',
+  },
+];
+---
+<section id="work" class="bg-slate-50 scroll-mt-16">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-20 lg:py-[88px] flex flex-col gap-10">
+    <div class="flex flex-col gap-3 max-w-[760px]">
+      <span class="text-[13px] font-bold tracking-[1.5px] uppercase text-emerald-700">Our work</span>
+      <h2 class="m-0 text-3xl lg:text-[42px] leading-tight font-extrabold">Helping leadership teams tackle complex business challenges.</h2>
+      <p class="m-0 text-[17px] leading-relaxed text-slate-600">Our work often crosses strategy, leadership, operations, and technology. Here are two examples of the problems we've helped clients address.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      {cases.map((c) => (
+        <article class="bg-white border border-slate-200 rounded-[10px] p-7 flex flex-col gap-3.5">
+          <span class="text-[13px] font-bold text-slate-500 uppercase tracking-wider">{c.sector}</span>
+          <h3 class="m-0 text-xl leading-snug font-bold">{c.title}</h3>
+          <p class="m-0 text-[15px] leading-relaxed text-slate-600"><strong class="text-[#0F2044]">Situation:</strong> {c.situation}</p>
+          <p class="m-0 text-[15px] leading-relaxed text-slate-600"><strong class="text-[#0F2044]">Our work:</strong> {c.work}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

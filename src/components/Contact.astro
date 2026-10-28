@@ -1,24 +1,23 @@
 ---
+const bookingUrl = 'https://calendar.app.google/UFqusQDgL7WHpCXU9';
 ---
-<section id="contact" class="py-20 lg:py-28" style="background:#0F2044">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 text-white">Ready to Stop Planning and Start Executing?</h2>
-    <p class="text-lg text-slate-100 leading-relaxed mb-12 max-w-2xl mx-auto">Schedule a 30-minute intro call with one of our partners. No pitch. No deck. Just an honest conversation about where you are, where you want to go, and whether Reboot is the right fit.</p>
-    <div class="bg-white rounded-xl p-8 mb-8 max-w-xl mx-auto">
-      <h3 class="text-xl font-bold mb-6" style="color:#0F2044">General Inquiries</h3>
-      <div class="space-y-4">
-        <div>
-          <p class="text-sm text-slate-600 mb-2">Email</p>
-          <a href="mailto:info@rebootventures.co" class="text-lg font-semibold" style="color:#0F2044">info@rebootventures.co</a>
-        </div>
-        <div>
-          <p class="text-sm text-slate-600 mb-2">Phone</p>
-          <a href="tel:+13015261780" class="text-lg font-semibold" style="color:#0F2044">(301) 526-1780</a>
-        </div>
-        <div class="pt-4 border-t border-slate-200">
-          <a href="https://calendar.app.google/UFqusQDgL7WHpCXU9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 rounded-lg text-white font-semibold" style="background:#059669">Book Intro Call →</a>
-        </div>
-      </div>
+<section id="contact" class="bg-[#0F2044] text-white scroll-mt-16">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-20 lg:py-[88px] flex flex-col lg:flex-row gap-10 lg:items-center lg:justify-between">
+    <div class="flex flex-col gap-3.5 max-w-[720px]">
+      <h2 class="m-0 text-3xl lg:text-[42px] leading-tight font-extrabold">What's the problem you're working on?</h2>
+      <p class="m-0 text-lg leading-relaxed text-slate-300">Strategy, leadership, execution, AI, or an important decision you're weighing. Let's talk about what you're trying to solve and whether Reboot can help.</p>
+    </div>
+    <div class="flex flex-col gap-3.5 lg:w-[300px] shrink-0">
+      <a href={bookingUrl} target="_blank" rel="noopener noreferrer" class="px-6 py-4 rounded-md bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-center">Book a 30-minute call</a>
+      <a href="mailto:info@rebootventures.co" class="text-emerald-300 hover:text-emerald-200 text-center text-[15px]">info@rebootventures.co</a>
     </div>
   </div>
+  <footer class="max-w-[1200px] mx-auto px-4 sm:px-6 py-6 border-t border-[#1E3A64] flex flex-wrap gap-4 justify-between text-[13px] text-slate-400">
+    <span>© 2026 Reboot Ventures LLC</span>
+    <span>
+      <a href="tel:+13015261780" class="hover:text-white">(301) 526-1780</a>
+      <span aria-hidden="true"> · </span>
+      <a href="https://www.linkedin.com/company/reboot-ventures-llc/" target="_blank" rel="noopener noreferrer" class="hover:text-white">LinkedIn</a>
+    </span>
+  </footer>
 </section>
